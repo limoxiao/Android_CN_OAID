@@ -11,12 +11,20 @@
  * See the Mulan PSL v2 for more details.
  */
 
-apply from: "${rootDir}/gradle/library.gradle"
-apply from: "${rootDir}/gradle/maven.gradle"
-//apply from: "${rootDir}/gradle/publish.gradle"
+package com.github.limoxiao.oaid;
 
+/**
+ * @author 贵州山野羡民（1032694760@qq.com）
+ * @since 2021/5/21 12:02
+ */
+public final class OAIDException extends RuntimeException {
 
+    public OAIDException(String message) {
+        super(message);
+    }
 
-dependencies {
+    public OAIDException(Throwable cause) {
+        super(cause);
+    }
 
 }

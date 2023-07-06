@@ -21,16 +21,16 @@ apply plugin: 'maven-publish'
 def includeJar = false
 def includeDoc = false
 def includeSrc = false
-def pomLibGroupName = 'com.github.gzuliyujiang'
-def pomLibArtifactId = project.name
+def pomLibGroupName = POM_GROUP_ID
+def pomLibArtifactId = POM_ARTIFACT_ID
 def pomLibVersion = getGitLatestTag()
-def pomLibDescription = "TODO description: ${rootProject.name} for Android"
-def pomSiteUrl = "https://gitee.com/li_yu_jiang/${rootProject.name}"
+def pomLibDescription = POM_DESCRIPTION
+def pomSiteUrl = POM_URL
 def pomLicenses = ["Apache License 2.0", "Mulan PSL v2"]
 //开发者信息
-def pomDeveloperId = 'liyujiang-gzu'
-def pomDeveloperName = '李玉江'
-def pomDeveloperEmail = '1032694760@qq.com'
+def pomDeveloperId = POM_DEVELOPER_ID
+def pomDeveloperName = POM_DEVELOPER_NAME
+def pomDeveloperEmail = POM_DEVELOPER_EMAIL
 
 /**
  * generate xxx-sources.jar

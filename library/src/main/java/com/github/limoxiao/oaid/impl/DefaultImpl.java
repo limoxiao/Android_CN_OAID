@@ -10,13 +10,29 @@
  * PURPOSE.
  * See the Mulan PSL v2 for more details.
  */
+package com.github.limoxiao.oaid.impl;
 
-apply from: "${rootDir}/gradle/library.gradle"
-apply from: "${rootDir}/gradle/maven.gradle"
-//apply from: "${rootDir}/gradle/publish.gradle"
+import com.github.limoxiao.oaid.IGetter;
+import com.github.limoxiao.oaid.IOAID;
+import com.github.limoxiao.oaid.OAIDException;
 
+/**
+ * @author 大定府羡民（1032694760@qq.com）
+ * @since 2020/5/30
+ */
+class DefaultImpl implements IOAID {
 
+    @Override
+    public boolean supported() {
+        return false;
+    }
 
-dependencies {
+    @Override
+    public void doGet(final IGetter getter) {
+        if (getter == null) {
+            return;
+        }
+        getter.onOAIDGetError(new OAIDException("Unsupported"));
+    }
 
 }

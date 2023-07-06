@@ -11,12 +11,10 @@
  * See the Mulan PSL v2 for more details.
  */
 
-apply from: "${rootDir}/gradle/library.gradle"
-apply from: "${rootDir}/gradle/maven.gradle"
-//apply from: "${rootDir}/gradle/publish.gradle"
+package com.github.limoxiao.oaid.impl.hw;
 
-
-
-dependencies {
-
+public class AdIdVerifyException extends Exception {
+    public AdIdVerifyException(String var1) {
+        super(var1);
+    }
 }

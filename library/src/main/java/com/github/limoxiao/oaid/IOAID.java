@@ -10,13 +10,28 @@
  * PURPOSE.
  * See the Mulan PSL v2 for more details.
  */
+package com.github.limoxiao.oaid;
 
-apply from: "${rootDir}/gradle/library.gradle"
-apply from: "${rootDir}/gradle/maven.gradle"
-//apply from: "${rootDir}/gradle/publish.gradle"
+/**
+ * OAID接口
+ *
+ * @author 大定府羡民（1032694760@qq.com）
+ * @since 2020/5/30
+ */
+public interface IOAID {
 
+    /**
+     * 是否支持OAID
+     *
+     * @return 支持则返回true，不支持则返回false
+     */
+    boolean supported();
 
-
-dependencies {
+    /**
+     * 异步获取OAID
+     *
+     * @param getter 回调
+     */
+    void doGet(IGetter getter);
 
 }
